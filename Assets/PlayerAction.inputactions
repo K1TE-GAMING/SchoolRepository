@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "PlayerAction",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "d09610c3-9be8-4f1f-998c-892d63592be7",
+            "actions": [
+                {
+                    "name": "Flap",
+                    "type": "Button",
+                    "id": "cb2bb6c1-df87-4271-92b6-0af70bb9ee58",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e401cfa4-7b62-4c81-8f5b-4b6ac3d3280a",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Flap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
