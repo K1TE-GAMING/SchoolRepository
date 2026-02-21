@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject gameWinScreen;
 
+    public Transform[] Screens;
+
     float countdown;
     float multiplier = 1.0f;
 
@@ -31,11 +33,8 @@ public class GameManager : MonoBehaviour
 
         CountDown();
 
-      EnableGameOver();
-
         spawnerTimer += Time.deltaTime;
 
-        // spawn enemy if countdown is greater than 0
         if (countdown > 0)
         {
             if (spawnerTimer >= rateOfSpawn)
@@ -45,6 +44,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        EnableGameOver();
 
     }
 
@@ -67,22 +67,31 @@ public class GameManager : MonoBehaviour
 
         scoreText.text = Mathf.Ceil(countdown).ToString();
     }
-    
+
+    private void Playerdead()
+    {
+        //check if player is dead
+
+        if(gameObject.tag'Player')
+    }
+
 
     public void EnableGameOver()
     {
-        if (GameObject.FindGameObjectsWithTag("Player").Length == 0)
+        int screenPosIdx = Random.Range(0, Screens.Length);
         {
-            //spawn game over screen 
+            Instantiate(gameOverScreen, Screens[screenPosIdx].position, Quaternion.identity);
             gameOverScreen.SetActive(true);
             isGameOver = true;
         }
-
     }
 
     public void EnableGameWin()
     {
-        gameOverScreen.SetActive(true);
+        int screenPosIdx = Random.Range(0, Screens.Length);
+
+        gameWinScreen.SetActive(true);
+        Instantiate(gameWinScreen, Screens[screenPosIdx].position, Quaternion.identity);
         isGameOver = true;
     }
 
