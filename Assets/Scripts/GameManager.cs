@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
     public Transform[] Screens;
 
     float countdown;
-    float multiplier = 1.0f;
 
     private void Start()
     {
@@ -45,6 +44,7 @@ public class GameManager : MonoBehaviour
         }
 
         EnableGameOver();
+        Playerdead();
 
     }
 
@@ -72,7 +72,10 @@ public class GameManager : MonoBehaviour
     {
         //check if player is dead
 
-        if(gameObject.tag'Player')
+        if (gameObject.tag == "Player" && isGameOver == false)
+        {
+            EnableGameOver();
+        }
     }
 
 
