@@ -1,19 +1,46 @@
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class Playershoot : MonoBehaviour
 {
     public BulletBehaviour bulletPrefab;
     public Transform firePoint;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private PlayerInputhanddle inputHandler;
+    
+
+    private void Awake()
     {
-        
+        inputHandler = GetComponent<PlayerInputhanddle>();
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        AimToMouse();
+
+        if (inputHandler.ShootPressed)
+        {
+            Shoot();
+        }
+    }
+
+    void AimToMouse()
+    {
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(inputHandler.AimInput);
+        mousePosition.z = 0f;
+
+        Vector3 direction = (mousePosition - firePoint.position).normalized;
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        firePoint.rotation = Quaternion.Euler(0f, 0f, angle);
+
+    }
+
+
+    void Shoot()
+    {
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }
