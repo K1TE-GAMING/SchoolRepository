@@ -7,9 +7,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private PlayerInputhanddle inputHandler;
 
-    Animator anim;
-    private Vector2 lastMoveDirection;
-    private bool facingDown = true;
+    //Animator anim;
+    //private Vector2 lastMoveDirection;
+    //private bool facingDown = true;
 
     void Awake()
     {
@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
 
     }
 
@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 direction = inputHandler.MoveInput;
         ProccessInputs();
-        Animate();
+        //Animate();
 
     }
 
@@ -46,18 +46,18 @@ public class PlayerMovement : MonoBehaviour
         float moveX = inputHandler.MoveInput.x;
         float moveY = inputHandler.MoveInput.y;
 
-        if((moveX == 0 && moveY == 0) && (inputHandler.MoveInput.x != 0 || inputHandler.MoveInput.y != 0))
-        {
-            lastMoveDirection = inputHandler.MoveInput;
-        }
+        //if((moveX == 0 && moveY == 0) && (inputHandler.MoveInput.x != 0 || inputHandler.MoveInput.y != 0))
+        //{
+        //    lastMoveDirection = inputHandler.MoveInput;
+        //}
     }
 
-    void Animate()
-    {
-        anim.SetFloat("MoveX", inputHandler.MoveInput.x);
-        anim.SetFloat("MoveY", inputHandler.MoveInput.y);
-        anim.SetFloat("MoveMagnitude", inputHandler.MoveInput.magnitude);
-        anim.SetFloat("LastMoveX", lastMoveDirection.x);
-        anim.SetFloat("LastMoveY", lastMoveDirection.y);
-    }
+    //void Animate()
+    //{
+    //    anim.SetFloat("MoveX", inputHandler.MoveInput.x);
+    //    anim.SetFloat("MoveY", inputHandler.MoveInput.y);
+    //    anim.SetFloat("MoveMagnitude", inputHandler.MoveInput.magnitude);
+    //    anim.SetFloat("LastMoveX", lastMoveDirection.x);
+    //    anim.SetFloat("LastMoveY", lastMoveDirection.y);
+    //}
 }
