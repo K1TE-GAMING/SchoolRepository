@@ -8,12 +8,24 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: 30de30ab238c3ae48bd73a6ecbcda414
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Gameplay.unity
     guid: 71e69f1ef6cd56e44ba8b75f2941dbab
+  - enabled: 1
+    path: Assets/Scenes/Quest 6/Character Selection.unity
+    guid: 15db8a9957be22a4cb33a9cd181e02d5
+  - enabled: 1
+    path: Assets/Scenes/Quest 6/Gameplay Fire.unity
+    guid: 8436249dbaa55a949ae1c13977ecffeb
+  - enabled: 1
+    path: Assets/Scenes/Quest 6/Gameplay Grass.unity
+    guid: 793f852c0ac587b4bbd65ddbc1bfe547
+  - enabled: 1
+    path: Assets/Scenes/Quest 6/Gameplay Water.unity
+    guid: 6ea9da74899ca5347a44816fea03d907
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
