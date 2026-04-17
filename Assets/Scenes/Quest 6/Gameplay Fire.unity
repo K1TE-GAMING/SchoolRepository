@@ -596,7 +596,7 @@ GameObject:
   - component: {fileID: 1594416164}
   - component: {fileID: 1594416160}
   m_Layer: 0
-  m_Name: FirePlayer_0
+  m_Name: Player
   m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
