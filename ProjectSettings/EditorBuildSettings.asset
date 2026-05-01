@@ -26,6 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Quest 6/Gameplay Water.unity
     guid: 6ea9da74899ca5347a44816fea03d907
+  - enabled: 1
+    path: Assets/Scenes/Final quest/Menu.unity
+    guid: ed80362a251540f4a965bdfb0b39ecfd
+  - enabled: 1
+    path: Assets/Scenes/Final quest/Gamplay.unity
+    guid: 454fa8767dc386b4e8a8274234b0a0d1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -10,6 +10,7 @@ public class BulletBehaviour : MonoBehaviour
         transform.position += transform.right * bulletSpeed * Time.deltaTime;
 
         destroyBullet();
+
     }
 
     void destroyBullet()

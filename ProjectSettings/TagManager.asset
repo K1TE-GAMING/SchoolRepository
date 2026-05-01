@@ -9,6 +9,11 @@ TagManager:
   - Water
   - Grass
   - Fire
+  - Steel Wall
+  - Brick Wall
+  - Bullet
+  - Tank
+  - Raccon
   layers:
   - Default
   - TransparentFX
